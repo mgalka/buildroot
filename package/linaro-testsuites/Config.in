@@ -1,6 +1,12 @@
 config BR2_PACKAGE_LINARO_TESTSUITES
 	bool "linaro_testsuites"
 	select BR2_PACKAGE_BASH
+	select BR2_PACKAGE_COREUTILS
+	select BR2_PACKAGE_KEYUTILS
+	select BR2_PACKAGE_LAVA_TEST_SHELL
+	select BR2_PACKAGE_LIBFFI
+	select BR2_PACKAGE_PYTHON
+	select BR2_PACKAGE_PYTHON_NUMPY
 	depends on BR2_PACKAGE_BUSYBOX_SHOW_OTHERS
 	help
 	  Tests from linaros test repository.
