@@ -32,6 +32,10 @@ config BR2_KERNEL_HEADERS_3_2
 	depends on !BR2_riscv
 	select BR2_TOOLCHAIN_HEADERS_AT_LEAST_3_2
 
+config BR2_KERNEL_HEADERS_3_18
+	bool "Linux 3.18.x kernel headers"
+	select BR2_TOOLCHAIN_HEADERS_AT_LEAST_3_18
+
 config BR2_KERNEL_HEADERS_4_1
 	bool "Linux 4.1.x kernel headers"
 	depends on !BR2_riscv
@@ -289,6 +293,7 @@ endchoice
 config BR2_DEFAULT_KERNEL_HEADERS
 	string
 	default "3.2.102"	if BR2_KERNEL_HEADERS_3_2
+	default "3.18.133"	if BR2_KERNEL_HEADERS_3_18
 	default "4.1.52"	if BR2_KERNEL_HEADERS_4_1
 	default "4.4.174"	if BR2_KERNEL_HEADERS_4_4
 	default "4.9.156"	if BR2_KERNEL_HEADERS_4_9

@@ -1738,13 +1738,6 @@ config BR2_KERNEL_HEADERS_4_8
 	  Version 4.8.x of the Linux kernel headers are no longer
 	  maintained upstream and are now removed.
 
-config BR2_KERNEL_HEADERS_3_18
-	bool "kernel headers version 3.18.x are no longer supported"
-	select BR2_LEGACY
-	help
-	  Version 3.18.x of the Linux kernel headers are no longer
-	  maintained upstream and are now removed.
-
 config BR2_GLIBC_VERSION_2_22
 	bool "glibc 2.22 removed"
 	select BR2_LEGACY
